@@ -1,0 +1,164 @@
+/* src/styles/theme-utils.css */
+/* هذا الملف يحتوي على قيم RGB للألوان لاستخدامها مع الشفافية */
+
+:root {
+    /* ألوان الخلفية كقيم RGB للاستخدام مع الشفافية */
+    --bg-white-rgb: 255, 255, 255;
+    --bg-light-rgb: 249, 250, 251;
+    --bg-lighter-rgb: 243, 244, 246;
+    --bg-dark-rgb: 17, 24, 39;
+    --bg-dark-light-rgb: 31, 41, 55;
+
+    /* ألوان النص كقيم RGB */
+    --text-dark-rgb: 31, 41, 55;
+    --text-medium-rgb: 75, 85, 99;
+    --text-light-rgb: 107, 114, 128;
+    --text-white-rgb: 255, 255, 255;
+
+    /* ألوان الثيم الأساسية كقيم RGB */
+    --primary-color-rgb: 67, 97, 238;
+    --primary-dark-rgb: 58, 12, 163;
+    --primary-light-rgb: 114, 9, 183;
+    --secondary-color-rgb: 76, 201, 240;
+    --accent-color-rgb: 16, 185, 129;
+
+    /* ألوان الحالة كقيم RGB */
+    --success-color-rgb: 16, 185, 129;
+    --warning-color-rgb: 245, 158, 11;
+    --error-color-rgb: 239, 68, 68;
+    --info-color-rgb: 59, 130, 246;
+}
+
+[data-theme="dark"] {
+    /* تحديث قيم RGB للوضع المظلم */
+    --text-dark-rgb: 249, 250, 251;
+    --text-medium-rgb: 209, 213, 219;
+    --text-light-rgb: 156, 163, 175;
+}
+
+/* دوال مساعدة للألوان مع الشفافية */
+/* هذه الفئات تستخدم مع التنسيقات inline */
+.bg-primary-10 { background-color: rgba(var(--primary-color-rgb), 0.1); }
+.bg-primary-20 { background-color: rgba(var(--primary-color-rgb), 0.2); }
+.bg-primary-30 { background-color: rgba(var(--primary-color-rgb), 0.3); }
+.bg-primary-40 { background-color: rgba(var(--primary-color-rgb), 0.4); }
+.bg-primary-50 { background-color: rgba(var(--primary-color-rgb), 0.5); }
+.bg-primary-60 { background-color: rgba(var(--primary-color-rgb), 0.6); }
+.bg-primary-70 { background-color: rgba(var(--primary-color-rgb), 0.7); }
+.bg-primary-80 { background-color: rgba(var(--primary-color-rgb), 0.8); }
+.bg-primary-90 { background-color: rgba(var(--primary-color-rgb), 0.9); }
+
+.bg-secondary-10 { background-color: rgba(var(--secondary-color-rgb), 0.1); }
+.bg-secondary-20 { background-color: rgba(var(--secondary-color-rgb), 0.2); }
+.bg-secondary-30 { background-color: rgba(var(--secondary-color-rgb), 0.3); }
+.bg-secondary-40 { background-color: rgba(var(--secondary-color-rgb), 0.4); }
+.bg-secondary-50 { background-color: rgba(var(--secondary-color-rgb), 0.5); }
+.bg-secondary-60 { background-color: rgba(var(--secondary-color-rgb), 0.6); }
+.bg-secondary-70 { background-color: rgba(var(--secondary-color-rgb), 0.7); }
+.bg-secondary-80 { background-color: rgba(var(--secondary-color-rgb), 0.8); }
+.bg-secondary-90 { background-color: rgba(var(--secondary-color-rgb), 0.9); }
+
+/* فئات خلفية النص للعناصر المختلفة */
+.bg-accent-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.bg-primary-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+}
+
+.bg-secondary-gradient {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+}
+
+/* فئات تأثيرات النص */
+.text-gradient-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.text-gradient-secondary {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* الحالات التفاعلية الشائعة */
+.hover-lift {
+    transition: var(--transition-normal);
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.hover-scale {
+    transition: var(--transition-normal);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-bright {
+    transition: var(--transition-normal);
+}
+
+.hover-bright:hover {
+    filter: brightness(1.1);
+}
+
+/* تأثيرات متقدمة */
+.glass-effect {
+    background-color: rgba(var(--bg-white-rgb), 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(var(--bg-white-rgb), 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .glass-effect {
+    background-color: rgba(var(--bg-dark-rgb), 0.7);
+    border: 1px solid rgba(var(--bg-dark-rgb), 0.2);
+}
+
+.card-hover-effect {
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+    rgba(var(--primary-color-rgb), 0.1),
+    rgba(var(--secondary-color-rgb), 0.1));
+    opacity: 0;
+    transition: var(--transition-normal);
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-hover-effect:hover::before {
+    opacity: 1;
+}

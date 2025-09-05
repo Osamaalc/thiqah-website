@@ -1,0 +1,175 @@
+/* src/styles/components/FeaturesSection.css */
+
+/* قسم المميزات */
+.features-section {
+    padding: 7rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-mode .features-section {
+    background-color: var(--dark-bg-primary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    position: relative;
+    background-color: var(--bg-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s ease;
+    padding: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.dark-mode .feature-card {
+    background-color: var(--dark-bg-tertiary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.dark-mode .feature-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.feature-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    height: 60px;
+}
+
+.feature-icon-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transform: rotate(-10deg);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon-bg {
+    transform: rotate(0deg) scale(1.1);
+}
+
+.feature-bg-1 {
+    background: linear-gradient(135deg, #818CF8, #4F46E5);
+}
+
+.feature-bg-2 {
+    background: linear-gradient(135deg, #34D399, #10B981);
+}
+
+.feature-bg-3 {
+    background: linear-gradient(135deg, #60A5FA, #3B82F6);
+}
+
+.feature-bg-4 {
+    background: linear-gradient(135deg, #FBBF24, #F59E0B);
+}
+
+.feature-bg-5 {
+    background: linear-gradient(135deg, #F87171, #EF4444);
+}
+
+.feature-bg-6 {
+    background: linear-gradient(135deg, #A78BFA, #8B5CF6);
+}
+
+.feature-bg-7 {
+    background: linear-gradient(135deg, #06B6D4, #0891B2);
+}
+
+.feature-icon span {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--text-dark);
+    position: relative;
+}
+
+.feature-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.feature-card:hover .feature-title::after {
+    width: 60px;
+}
+
+.dark-mode .feature-title {
+    color: var(--dark-text-primary);
+}
+
+.dark-mode .feature-title::after {
+    background: linear-gradient(90deg, var(--primary-light), transparent);
+}
+
+.feature-description {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.dark-mode .feature-description {
+    color: var(--dark-text-secondary);
+}
+
+/* وضع الجوال */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .feature-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

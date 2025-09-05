@@ -1,0 +1,279 @@
+/* src/styles/components/HeroAnimations.css */
+
+/* تكوين الكانفاس الخاص بالجزيئات التفاعلية */
+.hero-particles-canvas {
+    pointer-events: auto !important; /* للسماح بتفاعل المؤشر */
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.hero-section.visible .hero-particles-canvas {
+    opacity: 1;
+}
+
+/* تأثيرات فريم موشن */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(52, 211, 153, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(52, 211, 153, 0.6), 0 0 25px rgba(52, 211, 153, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(52, 211, 153, 0.3);
+    }
+}
+
+/* تعزيز الأزرار */
+.hero-section .primary-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: glow 4s infinite;
+}
+
+/* تأثير لامع للأزرار */
+.hero-section .primary-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0) 60%,
+            rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    opacity: 0.6;
+    transition: 0.8s;
+    z-index: -1;
+    animation: shine 3s infinite;
+}
+
+.hero-section .primary-button:hover::after {
+    animation-duration: 1s;
+}
+
+@keyframes shine {
+    0% {
+        top: -100%;
+        left: -100%;
+        opacity: 0.7;
+    }
+    100% {
+        top: 100%;
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+/* تأثيرات زجاجية إضافية */
+.hero-section .secondary-button {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.05) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-section .secondary-button:hover {
+    background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.1) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
+}
+
+/* تأثيرات إضافية للعناوين */
+.hero-title, .hero-subtitle {
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-title .highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.hero-title .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(
+            to top,
+            rgba(16, 185, 129, 0.15) 0%,
+            rgba(16, 185, 129, 0) 100%
+    );
+    z-index: -1;
+    transition: height 0.4s ease-out;
+}
+
+.hero-title:hover .highlight::after {
+    height: 60%;
+}
+
+/* تحسين تأثير التوهج للعناصر */
+.hero-section.visible .floating-shape {
+    filter: blur(35px);
+    opacity: 0.25;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+}
+
+/* تأثير متقدم للنص المميز */
+@keyframes textGlowing {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(52, 211, 153, 0.2), 0 0 15px rgba(52, 211, 153, 0.1);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(52, 211, 153, 0.4), 0 0 30px rgba(52, 211, 153, 0.2), 0 0 40px rgba(52, 211, 153, 0.1);
+    }
+}
+
+.hero-section.visible .highlight {
+    animation: textGlowing 4s infinite alternate ease-in-out;
+}
+
+/* تأثير ظلي للمحتوى الرئيسي */
+.hero-content {
+    position: relative;
+    z-index: 5;
+}
+
+/* تأثير ظلي للبطاقات */
+.hero-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(
+            ellipse at center,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0) 70%
+    );
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: blur(40px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1.2s ease 0.5s;
+}
+
+.hero-section.visible .hero-content::before {
+    opacity: 1;
+}
+
+/* الأشكال المتحركة بشكل شبه سائل */
+.blob-shape {
+    position: absolute;
+    opacity: 0.15;
+    filter: blur(40px);
+    transition: all 0.5s ease;
+    animation: blob-animation 25s infinite alternate ease-in-out;
+}
+
+.blob-shape:nth-child(1) {
+    top: -10%;
+    right: 10%;
+    width: 40vw;
+    height: 40vw;
+    max-width: 600px;
+    max-height: 600px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    animation-delay: 0s;
+}
+
+.blob-shape:nth-child(2) {
+    bottom: 10%;
+    left: -5%;
+    width: 45vw;
+    height: 45vw;
+    max-width: 650px;
+    max-height: 650px;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+    animation-delay: -5s;
+    animation-duration: 30s;
+}
+
+/* تحسينات للجوال */
+@media (max-width: 768px) {
+    .blob-shape {
+        filter: blur(30px);
+    }
+
+    .blob-shape:nth-child(1), .blob-shape:nth-child(2) {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .hero-section .primary-button::after {
+        animation-duration: 2s;
+    }
+
+    @keyframes textGlowing {
+        0%, 100% {
+            text-shadow: 0 0 8px rgba(52, 211, 153, 0.2), 0 0 10px rgba(52, 211, 153, 0.1);
+        }
+        50% {
+            text-shadow: 0 0 15px rgba(52, 211, 153, 0.3), 0 0 20px rgba(52, 211, 153, 0.15);
+        }
+    }
+}
+
+/* تحسين أداء الرسوم المتحركة */
+@media (prefers-reduced-motion: reduce) {
+    .hero-particles-canvas,
+    .floating-shape,
+    .morph-shape,
+    .blob-shape,
+    .hero-section .primary-button::after {
+        animation: none;
+        transition: none;
+    }
+
+    .hero-section .hero-title .highlight,
+    .hero-section .primary-button {
+        animation: none;
+    }
+}
+
+/* إضافة متميزة: تأثير دائرة الضوء المتابعة للمؤشر */
+.light-cursor {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0) 70%
+    );
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hero-section:hover .light-cursor {
+    opacity: 1;
+}

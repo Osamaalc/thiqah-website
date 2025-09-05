@@ -1,0 +1,1011 @@
+/*!* src/styles/contact.css *!*/
+/*@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');*/
+
+/*!* أنماط عامة *!*/
+/*.animate-on-scroll {*/
+/*    opacity: 0;*/
+/*    transform: translateY(30px);*/
+/*    transition: opacity 0.8s ease, transform 0.8s ease;*/
+/*}*/
+
+/*.animate-on-scroll.animate {*/
+/*    opacity: 1;*/
+/*    transform: translateY(0);*/
+/*}*/
+
+/*.section-title {*/
+/*    font-size: 2.5rem;*/
+/*    color: #1F2937;*/
+/*    font-weight: 700;*/
+/*    margin-bottom: 1rem;*/
+/*}*/
+
+/*.section-underline {*/
+/*    width: 80px;*/
+/*    height: 4px;*/
+/*    background: linear-gradient(90deg, #4F46E5, #7C3AED);*/
+/*    margin-bottom: 2rem;*/
+/*    border-radius: 2px;*/
+/*}*/
+
+/*.section-underline.center {*/
+/*    margin: 0 auto 2rem;*/
+/*}*/
+
+/*.section-description {*/
+/*    max-width: 700px;*/
+/*    margin: 0 auto 3rem;*/
+/*    color: #6B7280;*/
+/*    font-size: 1.1rem;*/
+/*}*/
+
+/*.text-center {*/
+/*    text-align: center;*/
+/*}*/
+
+/*!* قسم الترحيب *!*/
+/*.contact-hero-section {*/
+/*    position: relative;*/
+/*    height: 50vh;*/
+/*    min-height: 400px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    background: linear-gradient(135deg, #4F46E5, #7C3AED);*/
+/*    color: #fff;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.contact-hero-overlay {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");*/
+/*}*/
+
+/*.contact-hero-content {*/
+/*    position: relative;*/
+/*    z-index: 2;*/
+/*    max-width: 800px;*/
+/*    margin: 0 auto;*/
+/*    text-align: center;*/
+/*    padding: 0 20px;*/
+/*}*/
+
+/*.contact-hero-title {*/
+/*    font-size: 3.5rem;*/
+/*    font-weight: 900;*/
+/*    margin-bottom: 1.5rem;*/
+/*    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);*/
+/*}*/
+
+/*.contact-hero-separator {*/
+/*    width: 100px;*/
+/*    height: 5px;*/
+/*    background-color: #10B981;*/
+/*    margin: 0 auto 1.5rem;*/
+/*    border-radius: 3px;*/
+/*}*/
+
+/*.contact-hero-description {*/
+/*    font-size: 1.2rem;*/
+/*    opacity: 0.9;*/
+/*    max-width: 600px;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*!* قسم معلومات الاتصال *!*/
+/*.contact-info-section {*/
+/*    padding: 5rem 0;*/
+/*    background-color: #f9fafb;*/
+/*}*/
+
+/*.contact-info-container {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr;*/
+/*    gap: 3rem;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.contact-info-description {*/
+/*    font-size: 1.1rem;*/
+/*    color: #6B7280;*/
+/*    margin-bottom: 2rem;*/
+/*    line-height: 1.6;*/
+/*}*/
+
+/*.contact-details {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 1.5rem;*/
+/*    margin-bottom: 2rem;*/
+/*}*/
+
+/*.contact-detail-item {*/
+/*    display: flex;*/
+/*    align-items: flex-start;*/
+/*    gap: 1rem;*/
+/*}*/
+
+/*.contact-detail-icon {*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(124, 58, 237, 0.1));*/
+/*    border-radius: 10px;*/
+/*    font-size: 1.5rem;*/
+/*    color: #4F46E5;*/
+/*    flex-shrink: 0;*/
+/*}*/
+
+/*.contact-detail-content h3 {*/
+/*    font-size: 1.2rem;*/
+/*    font-weight: 700;*/
+/*    color: #1F2937;*/
+/*    margin-bottom: 0.3rem;*/
+/*}*/
+
+/*.contact-detail-content p {*/
+/*    font-size: 1.1rem;*/
+/*    color: #6B7280;*/
+/*}*/
+
+/*.social-contact-buttons {*/
+/*    display: flex;*/
+/*    gap: 1rem;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+
+/*.social-contact-button {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    gap: 0.8rem;*/
+/*    padding: 1rem 1.5rem;*/
+/*    border-radius: 50px;*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*    font-size: 1.1rem;*/
+/*    font-weight: 600;*/
+/*    transition: all 0.3s ease;*/
+/*    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.social-contact-button.whatsapp {*/
+/*    background: linear-gradient(135deg, #25D366, #128C7E);*/
+/*}*/
+
+/*.social-contact-button.telegram {*/
+/*    background: linear-gradient(135deg, #0088cc, #0066aa);*/
+/*}*/
+
+/*.social-contact-button:hover {*/
+/*    transform: translateY(-5px);*/
+/*    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+/*.contact-info-image img {*/
+/*    width: 100%;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*!* قسم نموذج الاتصال *!*/
+/*.contact-form-section {*/
+/*    padding: 5rem 0;*/
+/*}*/
+
+/*.contact-form-container {*/
+/*    max-width: 800px;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*.contact-form-description {*/
+/*    font-size: 1.1rem;*/
+/*    color: #6B7280;*/
+/*    margin-bottom: 2rem;*/
+/*    line-height: 1.6;*/
+/*}*/
+
+/*.contact-form {*/
+/*    background-color: white;*/
+/*    padding: 3rem;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);*/
+/*}*/
+
+/*.form-group {*/
+/*    margin-bottom: 1.5rem;*/
+/*}*/
+
+/*.form-row {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr;*/
+/*    gap: 1.5rem;*/
+/*    margin-bottom: 1.5rem;*/
+/*}*/
+
+/*.form-group label {*/
+/*    display: block;*/
+/*    font-size: 1rem;*/
+/*    font-weight: 600;*/
+/*    color: #4B5563;*/
+/*    margin-bottom: 0.5rem;*/
+/*}*/
+
+/*.form-group input,*/
+/*.form-group textarea {*/
+/*    width: 100%;*/
+/*    padding: 1rem;*/
+/*    border: 1px solid #e5e7eb;*/
+/*    border-radius: 8px;*/
+/*    font-size: 1rem;*/
+/*    color: #1F2937;*/
+/*    transition: all 0.3s ease;*/
+/*    font-family: 'Cairo', sans-serif;*/
+/*}*/
+
+/*.form-group input:focus,*/
+/*.form-group textarea:focus {*/
+/*    outline: none;*/
+/*    border-color: #4F46E5;*/
+/*    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);*/
+/*}*/
+
+/*.form-group textarea {*/
+/*    resize: vertical;*/
+/*}*/
+
+/*.submit-button {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    gap: 0.8rem;*/
+/*    width: 100%;*/
+/*    padding: 1rem;*/
+/*    background: linear-gradient(135deg, #4F46E5, #7C3AED);*/
+/*    color: white;*/
+/*    border: none;*/
+/*    border-radius: 8px;*/
+/*    font-size: 1.1rem;*/
+/*    font-weight: 600;*/
+/*    cursor: pointer;*/
+/*    transition: all 0.3s ease;*/
+/*    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.submit-button:hover {*/
+/*    transform: translateY(-3px);*/
+/*    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);*/
+/*}*/
+
+/*.submit-button:disabled {*/
+/*    opacity: 0.7;*/
+/*    cursor: not-allowed;*/
+/*    transform: none;*/
+/*}*/
+
+/*.spin {*/
+/*    animation: spin 1s linear infinite;*/
+/*}*/
+
+/*@keyframes spin {*/
+/*    0% { transform: rotate(0deg); }*/
+/*    100% { transform: rotate(360deg); }*/
+/*}*/
+
+/*.form-message {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    gap: 0.5rem;*/
+/*    margin-top: 1rem;*/
+/*    padding: 1rem;*/
+/*    border-radius: 8px;*/
+/*    font-size: 1rem;*/
+/*    font-weight: 600;*/
+/*}*/
+
+/*.form-message.success {*/
+/*    background-color: rgba(16, 185, 129, 0.1);*/
+/*    color: #10B981;*/
+/*}*/
+
+/*.form-message.error {*/
+/*    background-color: rgba(239, 68, 68, 0.1);*/
+/*    color: #EF4444;*/
+/*}*/
+
+/*!* قسم الأسئلة الشائعة *!*/
+/*.faq-section {*/
+/*    padding: 5rem 0;*/
+/*    background-color: #f3f4f6;*/
+/*}*/
+
+/*.faq-list {*/
+/*    max-width: 800px;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*.faq-item {*/
+/*    background-color: white;*/
+/*    border-radius: 8px;*/
+/*    margin-bottom: 1rem;*/
+/*    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.faq-question {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-between;*/
+/*    padding: 1.5rem;*/
+/*    cursor: pointer;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*.faq-question h3 {*/
+/*    font-size: 1.1rem;*/
+/*    font-weight: 600;*/
+/*    color: #1F2937;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.faq-icon {*/
+/*    color: #4F46E5;*/
+/*    font-size: 1.2rem;*/
+/*    transform: rotate(0);*/
+/*    transition: transform 0.3s ease;*/
+/*}*/
+
+/*.faq-icon.active {*/
+/*    transform: rotate(180deg);*/
+/*}*/
+
+/*.faq-answer {*/
+/*    max-height: 0;*/
+/*    overflow: hidden;*/
+/*    padding: 0 1.5rem;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*.faq-answer.active {*/
+/*    max-height: 500px;*/
+/*    padding: 0 1.5rem 1.5rem;*/
+/*}*/
+
+/*.faq-answer p {*/
+/*    margin: 0;*/
+/*    color: #6B7280;*/
+/*    line-height: 1.6;*/
+/*}*/
+
+/*!* وضع الجوال *!*/
+/*@media (max-width: 768px) {*/
+/*    .contact-hero-title {*/
+/*        font-size: 2.5rem;*/
+/*    }*/
+
+/*    .contact-info-container {*/
+/*        grid-template-columns: 1fr;*/
+/*    }*/
+
+/*    .contact-info-image {*/
+/*        order: -1;*/
+/*        margin-bottom: 2rem;*/
+/*    }*/
+
+/*    .form-row {*/
+/*        grid-template-columns: 1fr;*/
+/*        gap: 1rem;*/
+/*    }*/
+
+/*    .social-contact-buttons {*/
+/*        flex-direction: column;*/
+/*    }*/
+
+/*    .contact-form {*/
+/*        padding: 2rem;*/
+/*    }*/
+
+/*    .faq-question h3 {*/
+/*        font-size: 1rem;*/
+/*    }*/
+/*}*/
+
+/* src/styles/contact.css */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+/* Root variables for colors */
+:root {
+    /* الألوان الأساسية */
+    --primary-color: #4F46E5;
+    --primary-light: #7C3AED;
+    --accent-color: #10B981;
+    --accent-dark: #059669;
+
+    /* ألوان النص */
+    --text-dark: #1F2937;
+    --text-medium: #4B5563;
+    --text-light: #6B7280;
+
+    /* ألوان الخلفية */
+    --bg-white: #ffffff;
+    --bg-light: #f9fafb;
+    --bg-lighter: #f3f4f6;
+
+    /* ألوان الوضع المظلم */
+    --dark-bg-primary: #111827;
+    --dark-bg-secondary: #1F2937;
+    --dark-bg-tertiary: #374151;
+    --dark-text-primary: #F9FAFB;
+    --dark-text-secondary: #E5E7EB;
+    --dark-text-tertiary: #D1D5DB;
+}
+
+/* أنماط عامة */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* تعديل لون العناوين في الوضع المظلم */
+.dark-mode .section-title {
+    color: var(--dark-text-primary);
+}
+
+.section-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    margin-bottom: 2rem;
+    border-radius: 2px;
+}
+
+.section-underline.center {
+    margin: 0 auto 2rem;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* تعديل لون وصف القسم في الوضع المظلم */
+.dark-mode .section-description {
+    color: var(--dark-text-secondary);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* تطبيق الوضع المظلم على الصفحة بأكملها */
+.contact-page.dark-mode {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+}
+
+/* قسم الترحيب */
+.contact-hero-section {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: #fff;
+    overflow: hidden;
+}
+
+/* تعديل خلفية قسم الترحيب في الوضع المظلم */
+.dark-mode .contact-hero-section {
+    background: linear-gradient(135deg, var(--dark-bg-secondary), var(--primary-color));
+}
+
+.contact-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* تعديل شكل الباترن في الوضع المظلم */
+.dark-mode .contact-hero-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.contact-hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-hero-separator {
+    width: 100px;
+    height: 5px;
+    background-color: var(--accent-color);
+    margin: 0 auto 1.5rem;
+    border-radius: 3px;
+}
+
+.contact-hero-description {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* قسم معلومات الاتصال */
+.contact-info-section {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+/* تعديل خلفية قسم معلومات الاتصال في الوضع المظلم */
+.dark-mode .contact-info-section {
+    background-color: var(--dark-bg-primary);
+}
+
+.contact-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.contact-info-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* تعديل لون وصف قسم الاتصال في الوضع المظلم */
+.dark-mode .contact-info-description {
+    color: var(--dark-text-secondary);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact-detail-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(124, 58, 237, 0.1));
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+/* تعديل أيقونات معلومات الاتصال في الوضع المظلم */
+.dark-mode .contact-detail-icon {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(124, 58, 237, 0.2));
+    color: var(--accent-color);
+}
+
+.contact-detail-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.3rem;
+}
+
+/* تعديل عناوين معلومات الاتصال في الوضع المظلم */
+.dark-mode .contact-detail-content h3 {
+    color: var(--dark-text-primary);
+}
+
+.contact-detail-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* تعديل نص معلومات الاتصال في الوضع المظلم */
+.dark-mode .contact-detail-content p {
+    color: var(--dark-text-secondary);
+}
+
+.social-contact-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* تعديل ظل أزرار التواصل في الوضع المظلم */
+.dark-mode .social-contact-button {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-contact-button.whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.social-contact-button.telegram {
+    background: linear-gradient(135deg, #0088cc, #0066aa);
+}
+
+.social-contact-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* تعديل تأثير الهوفر على أزرار التواصل في الوضع المظلم */
+.dark-mode .social-contact-button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.contact-info-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* تعديل ظل الصورة في الوضع المظلم */
+.dark-mode .contact-info-image img {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* قسم نموذج الاتصال */
+.contact-form-section {
+    padding: 5rem 0;
+}
+
+/* تعديل خلفية قسم نموذج الاتصال في الوضع المظلم */
+.dark-mode .contact-form-section {
+    background-color: var(--dark-bg-primary);
+}
+
+.contact-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form-description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* تعديل لون وصف النموذج في الوضع المظلم */
+.dark-mode .contact-form-description {
+    color: var(--dark-text-secondary);
+}
+
+.contact-form {
+    background-color: var(--bg-white);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* تعديل خلفية النموذج في الوضع المظلم */
+.dark-mode .contact-form {
+    background-color: var(--dark-bg-tertiary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-medium);
+    margin-bottom: 0.5rem;
+}
+
+/* تعديل لون تسميات الحقول في الوضع المظلم */
+.dark-mode .form-group label {
+    color: var(--dark-text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* تعديل حقول النموذج في الوضع المظلم */
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+    background-color: var(--dark-bg-secondary);
+    border-color: var(--dark-bg-tertiary);
+    color: var(--dark-text-primary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* تعديل تأثير التركيز على الحقول في الوضع المظلم */
+.dark-mode .form-group input:focus,
+.dark-mode .form-group textarea:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* تعديل زر الإرسال في الوضع المظلم */
+.dark-mode .submit-button {
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-bg-secondary));
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* تعديل تأثير الهوفر على زر الإرسال في الوضع المظلم */
+.dark-mode .submit-button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.form-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.form-message.success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+}
+
+/* تعديل رسالة النجاح في الوضع المظلم */
+.dark-mode .form-message.success {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: var(--accent-color);
+}
+
+.form-message.error {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+}
+
+/* تعديل رسالة الخطأ في الوضع المظلم */
+.dark-mode .form-message.error {
+    background-color: rgba(239, 68, 68, 0.2);
+}
+
+/* قسم الأسئلة الشائعة */
+.faq-section {
+    padding: 5rem 0;
+    background-color: var(--bg-lighter);
+}
+
+/* تعديل خلفية قسم الأسئلة الشائعة في الوضع المظلم */
+.dark-mode .faq-section {
+    background-color: var(--dark-bg-secondary);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* تعديل عناصر الأسئلة الشائعة في الوضع المظلم */
+.dark-mode .faq-item {
+    background-color: var(--dark-bg-tertiary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-question h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+/* تعديل عنوان السؤال في الوضع المظلم */
+.dark-mode .faq-question h3 {
+    color: var(--dark-text-primary);
+}
+
+.faq-icon {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transform: rotate(0);
+    transition: transform 0.3s ease;
+}
+
+/* تعديل أيقونة السؤال في الوضع المظلم */
+.dark-mode .faq-icon {
+    color: var(--accent-color);
+}
+
+.faq-icon.active {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.faq-answer.active {
+    max-height: 500px;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* تعديل نص الإجابة في الوضع المظلم */
+.dark-mode .faq-answer p {
+    color: var(--dark-text-secondary);
+}
+
+/* وضع الجوال */
+@media (max-width: 768px) {
+    .contact-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .contact-info-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-image {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .social-contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+}
